@@ -27,12 +27,12 @@ fn main()
 {
     println!("crud application on psql in rust");
 
-    //set database
-    // if let Err(e) = set_database()
-    // {
-    //     println!("Error in connecting with Psql DB. Error:{}", e);
-    //     return;
-    // }
+    // set database
+    if let Err(e) = set_database()
+    {
+        println!("Error in connecting with Psql DB. Error:{}", e);
+        return;
+    }
 
     //start server
     let listener = TcpListener::bind("127.0.0.1:8080").unwrap();
